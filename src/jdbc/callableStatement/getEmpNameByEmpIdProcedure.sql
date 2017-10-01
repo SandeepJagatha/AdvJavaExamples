@@ -1,0 +1,11 @@
+//JDBC CallableStatement Stored procedure IN parameter example.
+CREATE OR REPLACE PROCEDURE getEmpNameByEmpId(
+	   e_id IN EMPLOYEE.EMPLOYEE_ID%TYPE,
+	   e_NAME OUT EMPLOYEE.NAME%TYPE)
+IS
+BEGIN
+ 
+  SELECT NAME INTO e_NAME 
+  FROM  EMPLOYEE WHERE EMPLOYEE_ID = e_id;
+ 
+END;

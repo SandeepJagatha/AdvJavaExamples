@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlets.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern></url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>servlets.WelcomeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/WelcomeServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+	<servlet>
+		<servlet-name>InitParamExample</servlet-name>
+		<servlet-class>servlets.InitParamExample</servlet-class>
+		<init-param>
+			<param-name>appUser</param-name>
+			<param-value>Jagata</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitParamExample</servlet-name>
+		<url-pattern>/InitParamExample</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>ContextParamExample</servlet-name>
+		<servlet-class>servlets.ContextParamExample</servlet-class>
+	</servlet>
+
+	<context-param>
+		<param-name>appUser</param-name>
+		<param-value>SJAGATA</param-value>
+	</context-param>
+
+	<servlet-mapping>
+		<servlet-name>ContextParamExample</servlet-name>
+		<url-pattern>/ContextParamExample</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+	<servlet>
+		<servlet-name>CreateCookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.CreateCookieServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreateCookieServlet</servlet-name>
+		<url-pattern>/CreateCookieServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetCookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.GetCookieServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetCookieServlet</servlet-name>
+		<url-pattern>/GetCookieServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteCookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.DeleteCookieServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteCookieServlet</servlet-name>
+		<url-pattern>/DeleteCookieServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>servlets.filters.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/WelcomeFilterServlet</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>MyFilter</filter-name>
+		<filter-class>servlets.filters.MyFilter</filter-class>
+		<init-param>
+			<param-name>appUser</param-name>
+			<param-value>SJ</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MyFilter</filter-name>
+		<url-pattern>/MyFilter</url-pattern>
+	</filter-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>Servlet Name For Demo1</servlet-name>
+		<servlet-class>servlets.ServletDemo1</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Servlet Name For Demo1</servlet-name>
+		<url-pattern>/Demo1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletDemo</servlet-name>
+		<servlet-class>servlets.ServletDemo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletDemo</servlet-name>
+		<url-pattern>/ServletDemo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GenericServletDemo</servlet-name>
+		<servlet-class>servlets.GenericServletDemo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GenericServletDemo</servlet-name>
+		<url-pattern>/GenericServletDemo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HttpServletDemo</servlet-name>
+		<servlet-class>servlets.HttpServletDemo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpServletDemo</servlet-name>
+		<url-pattern>/HttpServletDemo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloWorld</servlet-name>
+		<servlet-class>servlets.HelloWorld</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+
+</web-app>
